@@ -57,7 +57,3 @@ module.exports = {
   setUser,
   clickConsultar,
 };
-
-
-// https://app.tangerino.com.br/Tangerino/?wicket:interface=wicket-1:12:content:searchFilters:filterForm:consultar::IActivePageBehaviorListener:0:&wicket:ignoreIfNotActive=true&random=0.9666845255549299
-// https://app.tangerino.com.br/Tangerino/?wicket:interface=:5:content:searchFilters:filterForm:consultar::IActivePageBehaviorListener:0:&wicket:ignoreIfNotActive=true&random=0.4110065102219549

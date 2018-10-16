@@ -1,3 +1,5 @@
+require('colors');
+
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -5,7 +7,7 @@ dotenv.config();
 const getEnv = (config) => {
   const env = process.env[config]
 
-  if (!env) throw new Error(`Please type your "${config}"`);
+  if (!env) throw new Error(`Please type your "${config}"`.bgRed.black);
 
   return env
 }

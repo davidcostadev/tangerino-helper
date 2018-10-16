@@ -18,7 +18,7 @@ this Project is for get how many hours we need to pay
 
 **USER_NAME**
 
-<img src="https://github.com/davidcostadev/tangerinohelper/raw/master/assets/info-1.png" />
+<img src="https://github.com/davidcostadev/tangerinohelper/raw/master/assets/info-2.png" />
 
 
 ## Usage

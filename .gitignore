@@ -1,3 +1,4 @@
 node_modules
 prints/*.png
 .env
+!prints/empty

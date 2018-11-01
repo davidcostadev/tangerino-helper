@@ -4,7 +4,8 @@ const doStart = require('./actions/login');
 const openPageHoras = require('./actions/openPageHoras');
 const {
   setUser,
-  clickConsultar
+  clickConsultar,
+  setPreviousMonth,
 } = require('./actions/getInfos');
 
 async function start() {
@@ -12,12 +13,22 @@ async function start() {
   const page = await browser.newPage();
   await page.goto('https://app.tangerino.com.br/Tangerino/pages/LoginPage/');
 
-  await doStart(page);
-  await openPageHoras(page);
-  await setUser(page);
-  const saldo = await clickConsultar(page);
+  try {
+    await doStart(page);
+    await openPageHoras(page);
+    await setUser(page);
+    const balanceCurrentMonth = await clickConsultar(page);
+    await setPreviousMonth(page);
+    const balancePreviousMonth = await clickConsultar(page);
 
-  console.log(`Saldo: ${saldo}`.bgGreen.black)
+    console.log('\n\n');
+    console.log('balance'.bgYellow.black);
+    console.log('previous month:', balancePreviousMonth.time, balancePreviousMonth.status);
+    console.log('current month:', balanceCurrentMonth.time, balanceCurrentMonth.status);
+  } catch (e) {
+    console.error(e);
+  }
+
 
   await browser.close();
 }

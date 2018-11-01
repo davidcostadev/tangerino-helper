@@ -35,7 +35,7 @@ previous month: 00:55 POSITIVO
 current month: -04:41 NEGATIVO
 ```
 
-<img src="https://github.com/davidcostadev/tangerinohelper/raw/master/assets/output.gif" />
+<img src="https://github.com/davidcostadev/tangerinohelper/raw/master/assets/output-2.gif" />
 
 
 ## Contributors

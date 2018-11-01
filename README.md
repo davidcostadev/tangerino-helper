@@ -25,7 +25,15 @@ this Project is for get how many hours we need to pay
 
 `yarn start`
 
+
+
 ## Output Example
+
+```
+balance
+previous month: 00:55 POSITIVO
+current month: -04:41 NEGATIVO
+```
 
 <img src="https://github.com/davidcostadev/tangerinohelper/raw/master/assets/output.gif" />
 

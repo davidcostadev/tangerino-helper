@@ -17,7 +17,7 @@ async function doLogin (page) {
   await page.type('input[name="pin"]', data.pin);
   await page.screenshot({path: './prints/03-before-login.png'});
   await Promise.all([
-    page.click('form div:nth-child(6) input'),
+    page.click('.btnLogin'),
     page.waitForNavigation()
   ]);
   await page.screenshot({path: './prints/04-after-login.png'});

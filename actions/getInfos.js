@@ -99,7 +99,7 @@ function parseData (text) {
 
    return {
      time,
-     status: saldo < 0 ? 'NEGATIVO'.bgRed.black: 'POSITIVO'.bgGreen.black
+     status: saldo < 0 ? 'DEBT'.bgRed.black: 'CREDIT'.bgGreen.black
    }
 }
 

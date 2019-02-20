@@ -23,10 +23,16 @@ this Project is for get how many hours we need to pay
 
 <img src="https://github.com/davidcostadev/tangerinohelper/raw/master/assets/info-2.png" />
 
-## TIPS
+# TIPS
  - You can get your **EMPLOYER_CODE** by checking the very first TANGERINO email you received, or by asking HR.
  - **PIN** is the 4 digit number you use punch in and out every day.
  - **USER_NAME** is a string with your name. You can copy this from the email you receive every time you punch in/out under the field 'Funcionário'.
+
+Your '.env' should look similar to this:
+
+EMPLOYER_CODE=ASD2Y
+PIN=1234
+USER_NAME='John Doe'
 
 
 

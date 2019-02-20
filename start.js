@@ -1,10 +1,10 @@
 require('colors');
 const puppeteer = require('puppeteer');
 const doStart = require('./actions/login');
-const openPageHoras = require('./actions/openPageHoras');
+const openPageHours = require('./actions/openPageHours');
 const {
   setUser,
-  clickConsultar,
+  clickConsult,
   setPreviousMonth,
 } = require('./actions/getInfos');
 
@@ -15,11 +15,11 @@ async function start() {
 
   try {
     await doStart(page);
-    await openPageHoras(page);
+    await openPageHours(page);
     await setUser(page);
-    const balanceCurrentMonth = await clickConsultar(page);
+    const balanceCurrentMonth = await clickConsult(page);
     await setPreviousMonth(page);
-    const balancePreviousMonth = await clickConsultar(page);
+    const balancePreviousMonth = await clickConsult(page);
 
     console.log('\n\n');
     console.log('balance'.bgYellow.black);

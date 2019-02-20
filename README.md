@@ -29,10 +29,11 @@ this Project is for get how many hours we need to pay
  - **USER_NAME** is a string with your name. You can copy this from the email you receive every time you punch in/out under the field 'Funcionário'.
 
 Your '.env' should look similar to this:
-
+```
 EMPLOYER_CODE=ASD2Y
 PIN=1234
 USER_NAME='John Doe'
+```
 
 
 

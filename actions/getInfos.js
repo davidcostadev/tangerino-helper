@@ -57,12 +57,12 @@ async function setPreviousMonth(page) {
 
 const addZero = n => n <= 9 ? `0${n}` : n;
 
-const getTime = saldo => (
+const getTime = balance => (
   [
-    saldo < 0 ? '-' : '',
+    balance < 0 ? '-' : '',
     [
-      saldo,
-      saldo % 1 * 60,
+      balance,
+      balance % 1 * 60,
     ].map(Math.abs)
     .map(Math.floor)
     .map(addZero)
@@ -73,7 +73,7 @@ const getTime = saldo => (
 function parseData (text) {
   console.log('Action'.bgWhite.black, 'parseData');
   
-  const saldo = text
+  const balance = text
     .match(/Saldo do dia:<\/br>(.*?)<\/span>/g)
     .filter(s => s.includes('Saldo do dia'))
     .filter(s => s.match(/-?[0-9][0-9]:[0-9][0-9]/))
@@ -95,16 +95,16 @@ function parseData (text) {
       return isNegative ? acc - (hours + minutes) : acc + hours + minutes
    }, 0) / 60;
 
-   const time = getTime(saldo)
+   const time = getTime(balance)
 
    return {
      time,
-     status: saldo < 0 ? 'NEGATIVO'.bgRed.black: 'POSITIVO'.bgGreen.black
+     status: balance < 0 ? 'DEBT'.bgRed.black: 'CREDIT'.bgGreen.black
    }
 }
 
-async function clickConsultar (page) {
-  console.log('Action'.bgWhite.black, 'clickConsultar');
+async function clickConsult (page) {
+  console.log('Action'.bgWhite.black, 'clickConsult');
   
   await page.screenshot({path: './prints/09-before-clickConsultar.png'});
   const [response] = await Promise.all([
@@ -119,6 +119,6 @@ async function clickConsultar (page) {
 
 module.exports = {
   setUser,
-  clickConsultar,
+  clickConsult,
   setPreviousMonth,
 };

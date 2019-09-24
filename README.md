@@ -1,19 +1,21 @@
-# Tangerino Helper
+# Tangerino Helper 
 
-this Project is for get how many hours we need to pay
+This project will calc the hours for you
 
 
-
-## Instalation
+## Installation
 
 - `git clone`
 - `yarn`
 - `cp .env.example .env`
 - Add your informations on env
 
+## Usage
+
+`yarn start`
 
 
-## Which informations?
+## Configuration
 
 **EMPLOYER_CODE** and **PIN**
 
@@ -37,9 +39,7 @@ USER_NAME='John Doe'
 
 
 
-## Usage
 
-`yarn start`
 
 
 

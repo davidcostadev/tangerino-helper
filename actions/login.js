@@ -16,10 +16,9 @@ async function doLogin (page) {
   await page.type('input[name="codigoEmpregador"]', data.employerCode);
   await page.type('input[name="pin"]', data.pin);
   await page.screenshot({path: './prints/03-before-login.png'});
-  await Promise.all([
-    page.click('.btnLogin'),
-    page.waitForNavigation()
-  ]);
+  await page.click('.btnLogin');
+  await page.waitForNavigation('domcontentloaded');
+
   await page.screenshot({path: './prints/04-after-login.png'});
 }
 
